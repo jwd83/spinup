@@ -21,3 +21,10 @@ apt-get install -y vim
 ufw allow 22
 ufw allow 80
 ufw enable
+
+# Get ez_isntall and pip running
+wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py
+wget https://raw.github.com/pypa/pip/master/contrib/get-pip.py
+
+python ez_setup.py
+python get-pip.py
