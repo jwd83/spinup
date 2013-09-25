@@ -22,9 +22,13 @@ ufw allow 22
 ufw allow 80
 ufw enable
 
-# Get ez_isntall and pip running
+# Get distribute, pip & virtualenv running
 curl -O http://python-distribute.org/distribute_setup.py
 python distribute_setup.py
 easy_install pip
 pip install virtualenv
 pip install virtualenvwrapper
+
+# Install some of my favorite python packages
+pip install flask
+pip install markdown
