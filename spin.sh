@@ -23,8 +23,8 @@ ufw allow 80
 ufw enable
 
 # Get ez_isntall and pip running
-wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py
-wget https://raw.github.com/pypa/pip/master/contrib/get-pip.py
-
-python ez_setup.py
-python get-pip.py
+curl -O http://python-distribute.org/distribute_setup.py
+python distribute_setup.py
+easy_install pip
+pip install virtualenv
+pip install virtualenvwrapper
