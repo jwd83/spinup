@@ -35,3 +35,11 @@ pip install markdown
 
 # Update mlocate db
 updatedb
+
+# Crontab updates
+# write out current crontab
+crontab -l > mycron
+echo "@hourly updatedb >/dev/null 2>&1" >> mycron
+# install new cron file
+crontab mycron
+rm mycron
