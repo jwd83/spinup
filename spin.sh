@@ -32,3 +32,6 @@ pip install virtualenvwrapper
 # Install some of my favorite python packages
 pip install flask
 pip install markdown
+
+# Update mlocate db
+updatedb
