@@ -1,4 +1,4 @@
 spinup
 ======
 
-A collection of shell scripts to spin up servers
+A collection of scripts to spin up servers
