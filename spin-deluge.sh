@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# -------------------------------------
+# Basic Setup
+# -------------------------------------
 # Update apt-get
 apt-get update
 
@@ -19,13 +22,35 @@ ufw allow 22
 ufw allow 58846
 ufw enable
 
-# Create Default Config
+# -------------------------------------
+# Create Config & Credentials
+# -------------------------------------
 deluged
 sleep 2
 deluge-console "config -s allow_remote True"
 deluge-console "config allow_remote"
 pkill deluged
 
-# Create a user
-echo "alice:MyC0mpL3xPass:10" >> ~/.config/deluge/auth
+# Create random admin credentials
+DELUGE_USER=$(cat /dev/urandom | tr -dc 'a-z0-9' | fold -w 12 | head -n 1)
+DELUGE_PASS=$(cat /dev/urandom | tr -dc 'a-z0-9' | fold -w 12 | head -n 1)
+
+# Install admin credentials
+echo "$DELUGE_USER:$DELUGE_PASS:10" >> ~/.config/deluge/auth
 deluged
+
+# -------------------------------------
+# Display config to the user
+# -------------------------------------
+echo "--- HERE ARE YOUR DELUGE SERVER DETAILS. COPY THESE DOWN ---"
+printf "Your public IP: "
+
+# Can revert to ifconfig.me if v4.ident.me ever goes down.
+# v4 seems to return far quicker than ifconfig.me. Can remove
+# the blank echo when using ifconfig.me
+
+# curl ifconfig.me
+curl v4.ident.me
+echo
+echo "Your admin username: $DELUGE_USER"
+echo "Your admin password: $DELUGE_PASS"
