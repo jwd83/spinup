@@ -16,6 +16,7 @@ ufw enable
 
 # Create Default Config
 deluged
+sleep 2
 deluge-console "config -s allow_remote True"
 deluge-console "config allow_remote"
 pkill deluged
