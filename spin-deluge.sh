@@ -11,7 +11,7 @@ apt-get install -y deluge-console
 
 # Setup firewall rules
 ufw allow 22
-ufw allow 80
+ufw allow 58846
 ufw enable
 
 # Enable Remote Connection
