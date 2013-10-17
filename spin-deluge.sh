@@ -1,8 +1,13 @@
 #!/bin/bash
 
-# Update apt-get and basic packages
+# Update apt-get
 apt-get update
-apt-get upgrade -y
+
+# Offer to upgrade packages
+read -p "Upgrade packages? y/N" yesorno
+case "$yesorno" in
+    y*)  apt-get upgrade -y ;;
+esac
 
 # Install our apps
 apt-get install -y ufw
