@@ -20,7 +20,7 @@ apt-get install -y vim
 
 # Setup firewall rules
 ufw allow 22
-ufw allow 8080
+ufw allow 8000
 ufw enable
 
 # Get distribute, pip & virtualenv running

@@ -12,9 +12,13 @@ A collection of scripts to help spin up Ubuntu/Debian Virtual Machines.
 
 Run these commands as the root user.
 
-### Python Web Server
+### Gunicorn Worker
 
-    bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-py.sh)
+    bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-gunicorn.sh)
+
+### NGINX Web Server
+
+    bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-nginx.sh)
 
 ### Deluge Thin Client
 
