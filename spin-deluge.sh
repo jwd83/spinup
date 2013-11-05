@@ -47,6 +47,10 @@ deluged
 htpasswd -b -c /var/.htpasswd $DELUGE_USER $DELUGE_PASS
 rm -f /var/www/index.html
 sed -i '/<Directory \/var\/www\/>/,/<\/Directory>/ s/AllowOverride None/AllowOverride all/' /etc/apache2/apache2.conf
+echo "AuthUserFile /var/.htpasswd"  >> /var/www/.htaccess
+echo "AuthType Basic"  >> /var/www/.htaccess
+echo "AuthName \"Deluge\"" >> /var/www/.htaccess
+echo "Require valid-user" >> /var/www/.htaccess
 service apache2 reload
 
 # -------------------------------------
@@ -64,3 +68,4 @@ curl v4.ident.me
 echo
 echo "Your admin username: $DELUGE_USER"
 echo "Your admin password: $DELUGE_PASS"
+
