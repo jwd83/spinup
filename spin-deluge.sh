@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # -------------------------------------
 # Basic Setup
 # -------------------------------------
@@ -7,7 +6,7 @@
 apt-get update
 
 # Offer to upgrade packages
-read -p "Upgrade packages? y/N" yesorno
+read -p "Upgrade packages? [y/N] " yesorno
 case "$yesorno" in
     y*)  apt-get upgrade -y ;;
 esac
@@ -17,6 +16,7 @@ apt-get install -y ufw
 apt-get install -y deluged
 apt-get install -y deluge-console
 apt-get install -y apache2
+apt-get install -y apache2-utils
 
 # Setup firewall rules
 ufw allow 22
@@ -44,10 +44,10 @@ deluged
 # -------------------------------------
 # Apache Create Config & Credentials
 # -------------------------------------
-htpasswd -b -c ~/srv/.htpasswd $DELUGE_USER $DELUGE_PASS
-
-
-
+htpasswd -b -c ~/var/.htpasswd $DELUGE_USER $DELUGE_PASS
+rm -f /var/www/index.html
+sed '/<Directory \/var\/www\/>/,/<\/Directory>/ s/AllowOverride None/AllowOverride all/' /etc/apache2/apache2.conf
+service apache2 reload
 # -------------------------------------
 # Display config to the user
 # -------------------------------------
