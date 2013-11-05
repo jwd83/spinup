@@ -16,14 +16,16 @@ esac
 apt-get install -y ufw
 apt-get install -y deluged
 apt-get install -y deluge-console
+apt-get install -y apache2
 
 # Setup firewall rules
 ufw allow 22
+ufw allow 80
 ufw allow 58846
 ufw enable
 
 # -------------------------------------
-# Create Config & Credentials
+# Deluge Create Config & Credentials
 # -------------------------------------
 deluged
 sleep 2
@@ -38,6 +40,13 @@ DELUGE_PASS=$(cat /dev/urandom | tr -dc 'a-z0-9' | fold -w 12 | head -n 1)
 # Install admin credentials
 echo "$DELUGE_USER:$DELUGE_PASS:10" >> ~/.config/deluge/auth
 deluged
+
+# -------------------------------------
+# Apache Create Config & Credentials
+# -------------------------------------
+htpasswd -b -c ~/srv/.htpasswd $DELUGE_USER $DELUGE_PASS
+
+
 
 # -------------------------------------
 # Display config to the user
