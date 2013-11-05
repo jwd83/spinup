@@ -44,10 +44,11 @@ deluged
 # -------------------------------------
 # Apache Create Config & Credentials
 # -------------------------------------
-htpasswd -b -c ~/var/.htpasswd $DELUGE_USER $DELUGE_PASS
+htpasswd -b -c /var/.htpasswd $DELUGE_USER $DELUGE_PASS
 rm -f /var/www/index.html
-sed '/<Directory \/var\/www\/>/,/<\/Directory>/ s/AllowOverride None/AllowOverride all/' /etc/apache2/apache2.conf
+sed -i '/<Directory \/var\/www\/>/,/<\/Directory>/ s/AllowOverride None/AllowOverride all/' /etc/apache2/apache2.conf
 service apache2 reload
+
 # -------------------------------------
 # Display config to the user
 # -------------------------------------
