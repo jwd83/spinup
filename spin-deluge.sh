@@ -31,6 +31,7 @@ deluged
 sleep 2
 deluge-console "config -s allow_remote True"
 deluge-console "config allow_remote"
+deluge-console "config --set download_location /var/www"
 pkill deluged
 
 # Create random admin credentials
@@ -56,7 +57,7 @@ service apache2 reload
 # -------------------------------------
 # Display config to the user
 # -------------------------------------
-echo "--- HERE ARE YOUR DELUGE SERVER DETAILS. COPY THESE DOWN ---"
+echo "--- HERE ARE YOUR DELUGE & APACHE SERVER DETAILS. COPY THESE DOWN ---"
 printf "Your public IP: "
 
 # Can revert to ifconfig.me if v4.ident.me ever goes down.
