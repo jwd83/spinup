@@ -25,6 +25,23 @@ COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+## Package Notes
+
+### Gunicorn Worker
+
+Hookup your WSGI Python Apps and prepare them for webs server of choice. Web
+server not included (unless you count Gunicorn).
+
+### NGINX Web Server
+
+Ready to cluster Gunicorn workers? This is still W.I.P. I have a config file
+where I left off included in this repo. See: nginxpy.conf
+
+### CHC : HHVM + CouchDB +  Composer.
+Want the bleeding edge? It doesn't get easier than this. Package Management,
+Facebook's HHVM JiT & one of the simplest NoSQL Databases with point and click
+replication.
+
 
 ## ToDo
 
