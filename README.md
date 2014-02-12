@@ -43,11 +43,15 @@ server not included (unless you count Gunicorn).
 Ready to cluster Gunicorn workers? This is still W.I.P. I have a config file
 where I left off included in this repo. See: nginxpy.conf
 
-### CHC : HHVM + CouchDB +  Composer.
+### CHC: HHVM + CouchDB +  Composer
 Want the bleeding edge? It doesn't get easier than this. Package Management,
 Facebook's HHVM JiT & one of the simplest NoSQL Databases with point and click
 replication.
 
+#### Ports
+22: SSH
+80: HTTP
+5984: CouchDB
 
 ## ToDo
 
@@ -76,7 +80,7 @@ Being developed on DigitalOcean's Ubuntu 12.04 x64 droplets.
 
     bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-galera.sh)
 
-### CouchDB + HHVM + Composer
+### CHC: CouchDB + HHVM + Composer
 Being developed on DigitalOcean's Ubuntu 12.04 x64 droplets.
 
     bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-couchdb-hhvm+composer.sh)
