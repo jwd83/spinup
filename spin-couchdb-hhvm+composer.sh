@@ -8,9 +8,9 @@ cd ~
 wget -O - http://dl.hhvm.com/conf/hhvm.gpg.key | sudo apt-key add -
 echo deb http://dl.hhvm.com/ubuntu precise main | sudo tee /etc/apt/sources.list.d/hhvm.list
 
-# Update the VM and install CouchDB, PHP5 CLI, HHVM & git
+# Update the VM and install CouchDB, PHP5 CLI, HHVM, git & UFW
 apt-get update -y && apt-get upgrade -y
-apt-get install couchdb php5-cli hhvm git -y
+apt-get install couchdb php5-cli hhvm git ufw -y
 
 # Install Composer globally
 curl -sS https://getcomposer.org/installer | php
@@ -21,3 +21,8 @@ wget https://raw.github.com/jared0x90/spinup/master/config/config.hdf
 
 # Make a place for our app to go per our HHVM config.hdf
 mkdir -p /srv/hhvm/app
+
+# Configure firewall rules
+ufw allow 22
+ufw allow 80
+ufw enable
