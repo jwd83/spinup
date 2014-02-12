@@ -11,7 +11,7 @@ echo deb http://dl.hhvm.com/ubuntu saucy main | sudo tee /etc/apt/sources.list.d
 
 # Update the VM and install CouchDB, PHP5 CLI, HHVM, git & UFW
 apt-get update -y && apt-get upgrade -y
-apt-get install couchdb php5-cli hhvm git ufw -y
+apt-get install couchdb php5-cli php5-json hhvm git ufw -y
 
 # Install Composer globally
 curl -sS https://getcomposer.org/installer | php
