@@ -1,3 +1,7 @@
+# HHVM base config
+# Modified from original:
+# https://github.com/javer/hhvm-vagrant-vm/blob/master/etc/hhvm/config.hdf
+
 PidFile = /var/run/hhvm.pid
 
 Eval {
@@ -25,7 +29,7 @@ Server {
     Port = 80
     ThreadCount = 10
 
-    SourceRoot = /var/www/site
+    SourceRoot = /srv/hhvm/app
     IncludeSearchPaths {
         # symfony = /var/www/symfony-1.4
     }
@@ -45,7 +49,7 @@ Server {
 
     ### startup options
     # TakeoverFilename = filename   # for port takeover between server instances
-    # DefaultDocument = index.php
+    DefaultDocument = index.php
     # StartupDocument = filename
     # WarmupDocument = filename
     # RequestInitFunction = function_name
@@ -53,7 +57,7 @@ Server {
     #     * = somedoc.php
     #     * = another.php
     # }
-    ErrorDocument404 = 404.php
+    # ErrorDocument404 = 404.php
     FatalErrorMessage = Something went terribly wrong... Check back :)
 
     ### shutdown options
@@ -261,8 +265,8 @@ Http {
 
 ### Mail
 Mail {
-    SendmailPath = sendmail -t -i
-    ForceExtraParameters =
+    # SendmailPath = sendmail -t -i
+    # ForceExtraParameters =
 }
 
 ### Tier overwrites
