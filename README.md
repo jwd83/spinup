@@ -43,6 +43,10 @@ server not included (unless you count Gunicorn).
 Ready to cluster Gunicorn workers? This is still W.I.P. I have a config file
 where I left off included in this repo. See: nginxpy.conf
 
+### MariaDB Galera Cluster
+
+Heavily incomplete. Intended to spin up a MariaDB galera cluster VM.
+
 ### CHC: HHVM + CouchDB +  Composer
 Want the bleeding edge? It doesn't get easier than this. Package Management,
 Facebook's HHVM JiT & one of the simplest NoSQL Databases with point and click
@@ -76,11 +80,9 @@ Run these commands as the root user.
     bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-deluge.sh)
 
 ### MariaDB Galera Cluster
-Being developed on DigitalOcean's Ubuntu 12.04 x64 droplets.
 
     bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-galera.sh)
 
 ### CHC: CouchDB + HHVM + Composer
-Being developed on DigitalOcean's Ubuntu 12.04 x64 droplets.
 
     bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-couchdb-hhvm+composer.sh)
