@@ -23,6 +23,7 @@ wget https://raw.github.com/jared0x90/spinup/master/config/config.hdf
 mkdir -p /srv/hhvm/app
 
 # Configure firewall rules
-ufw allow 22
-ufw allow 80
+ufw allow 22	# SSH
+ufw allow 80	# HTTP
+ufw allow 5984  # CouchDB
 ufw enable
