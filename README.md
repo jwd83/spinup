@@ -4,6 +4,12 @@ A collection of scripts to help spin up Ubuntu/Debian Virtual Machines.
 
 These scripts are to be run on *FRESH INSTALLS ONLY*.
 
+I test these on $5/mo SSD cloud servers from Digital Ocean! Please use my
+referral code if you would like to give them a try. It helps me keep the
+lights on :-)
+
+https://www.digitalocean.com/?refcode=a0f6a3bca1c8
+
 # The MIT License (MIT)
 
 Copyright (c) 2013 Jared De Blander
