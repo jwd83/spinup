@@ -51,3 +51,7 @@ Run these commands as the root user.
 ### MariaDB Galera Cluster for Ubuntu 12.04LTS
 
     bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-galera.sh)
+
+### CouchDB + HHVM + Composer for PHP
+
+    bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-couchdb-hhvm+composer.sh)
