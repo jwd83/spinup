@@ -46,7 +46,7 @@ where I left off included in this repo. See: nginxpy.conf
 ### CHC: HHVM + CouchDB +  Composer
 Want the bleeding edge? It doesn't get easier than this. Package Management,
 Facebook's HHVM JiT & one of the simplest NoSQL Databases with point and click
-replication.
+replication. Currently uses Ubuntu 13.10
 
 #### Ports
 22: SSH

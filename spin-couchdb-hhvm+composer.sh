@@ -1,12 +1,13 @@
 #!/bin/bash
-# CouchDB + HHVM + Composer for Ubuntu 12.04 LTS
+# CouchDB + HHVM + Composer
+# Ubuntu 13.10
 
 # Go to root's home folder if we aren't there already
 cd ~
 
 # Add Facebook's HHVM to our sources
 wget -O - http://dl.hhvm.com/conf/hhvm.gpg.key | sudo apt-key add -
-echo deb http://dl.hhvm.com/ubuntu precise main | sudo tee /etc/apt/sources.list.d/hhvm.list
+echo deb http://dl.hhvm.com/ubuntu saucy main | sudo tee /etc/apt/sources.list.d/hhvm.list
 
 # Update the VM and install CouchDB, PHP5 CLI, HHVM, git & UFW
 apt-get update -y && apt-get upgrade -y
