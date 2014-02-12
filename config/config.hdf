@@ -39,7 +39,8 @@ Server {
 
     # Only for debugging memory problems. When turned on, server will report
     # SmartAllocator's usage for each thread to stdout.
-    CheckMemory = false
+    # CheckMemory = false
+    # Throws a possible bad config warning. Disabled 2/12/2014 JWD
 
     # If ServerName is not specified for a virtual host, use prefix + this
     # suffix to compose one
