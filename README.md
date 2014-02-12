@@ -71,10 +71,12 @@ Run these commands as the root user.
 
     bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-deluge.sh)
 
-### MariaDB Galera Cluster for Ubuntu 12.04LTS
+### MariaDB Galera Cluster
+Being developed on DigitalOcean's Ubuntu 12.04 x64 droplets.
 
     bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-galera.sh)
 
-### CouchDB + HHVM + Composer for PHP
+### CouchDB + HHVM + Composer
+Being developed on DigitalOcean's Ubuntu 12.04 x64 droplets.
 
     bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-couchdb-hhvm+composer.sh)
