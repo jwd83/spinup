@@ -49,9 +49,9 @@ Facebook's HHVM JiT & one of the simplest NoSQL Databases with point and click
 replication. Currently uses Ubuntu 13.10
 
 #### Ports
-22: SSH
-80: HTTP
-5984: CouchDB
+* 22: SSH
+* 80: HTTP
+* 5984: CouchDB
 
 ## ToDo
 
