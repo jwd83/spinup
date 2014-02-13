@@ -1,6 +1,10 @@
 #!/bin/bash
 # CouchDB + HHVM + Composer
 
+# Generate a random admin password for CouchDB
+COUCH_PASS=$(cat /dev/urandom | tr -dc 'a-z0-9' | fold -w 12 | head -n 1)
+
+
 # Go to root's home folder if we aren't there already
 cd ~
 
@@ -25,5 +29,9 @@ mkdir -p /srv/hhvm/app
 # Configure firewall rules
 ufw allow 22	# SSH
 ufw allow 80	# HTTP
-ufw allow 5984  # CouchDB
 ufw enable
+
+# Create a Couch admin user with a random password
+curl -X PUT $HOST/_config/admins/anna -d '"$COUCH_PASS"'
+
+echo "Your admin password: $COUCH_PASS"
