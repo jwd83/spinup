@@ -2,7 +2,7 @@
 # CouchDB + HHVM + Composer
 
 # Generate a random admin password for CouchDB
-COUCH_PASS=$(cat /dev/urandom | tr -dc 'a-z0-9' | fold -w 12 | head -n 1)
+COUCH_PASS=$(cat /dev/urandom | tr -dc 'a-z0-9' | fold -w 24 | head -n 1)
 
 
 # Go to root's home folder if we aren't there already
