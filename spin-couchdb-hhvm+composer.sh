@@ -37,6 +37,7 @@ rm local.ini
 wget https://raw.github.com/jared0x90/spinup/master/config/local.ini
 echo admin=$COUCH_PASS >> /etc/couchdb/local.ini
 chown couchdb.couchdb local.ini
+service couchdb restart
 
 clear
 echo Important file locations...
