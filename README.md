@@ -10,7 +10,7 @@ lights on :-)
 
 https://www.digitalocean.com/?refcode=a0f6a3bca1c8
 
-# The MIT License (MIT)
+# License: MIT
 
 Copyright (c) 2013 Jared De Blander
 
@@ -31,58 +31,64 @@ COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-## Package Notes
+# Package Notes
 
-### Gunicorn Worker
+## Gunicorn Worker
 
 Hookup your WSGI Python Apps and prepare them for webs server of choice. Web
 server not included (unless you count Gunicorn).
 
-### NGINX Web Server
+## NGINX Web Server
 
 Ready to cluster Gunicorn workers? This is still W.I.P. I have a config file
 where I left off included in this repo. See: nginxpy.conf
 
-### MariaDB Galera Cluster
+## MariaDB Galera Cluster
 
 Heavily incomplete. Intended to spin up a MariaDB galera cluster VM.
 
-### CHC: HHVM + CouchDB +  Composer
+## CouchDB
+
+## CHC: HHVM + CouchDB +  Composer
 Want the bleeding edge? It doesn't get easier than this. Package Management,
 Facebook's HHVM JiT & one of the simplest NoSQL Databases with point and click
 replication. Currently uses Ubuntu 13.10
 
-#### Ports
+### Ports
 * 22: SSH
 * 80: HTTP
 * 5984: CouchDB
 
-## ToDo
+# ToDo
 
 1. Split Python into a Gunicon workers spinup and an NGINX reverse proxy spinup.
 2. Create a MariaDB spinup.
 3. Create a MongoDB spinup.
 
-## Instructions
+# Instructions
 
 Run these commands as the root user.
 
-### Gunicorn Worker
+## Gunicorn Worker
 
     bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-gunicorn.sh)
 
-### NGINX Web Server
+## NGINX Web Server
 
     bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-nginx.sh)
 
-### Deluge Thin Client
+## Deluge Thin Client
 
     bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-deluge.sh)
 
-### MariaDB Galera Cluster
+## MariaDB Galera Cluster
 
     bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-galera.sh)
 
-### CHC: CouchDB + HHVM + Composer
+## CouchDB
+
+    bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-couch.sh)
+
+## CHC: CouchDB + HHVM + Composer
 
     bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-couchdb-hhvm+composer.sh)

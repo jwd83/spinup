@@ -26,7 +26,7 @@ Log {
 Server {
     #Host = hiphop.site.local
     IP = 0.0.0.0
-    Port = 80
+    Port = 8000
     ThreadCount = 10
 
     SourceRoot = /srv/hhvm/app
