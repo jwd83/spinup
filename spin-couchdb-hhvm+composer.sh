@@ -29,6 +29,7 @@ mkdir -p /srv/hhvm/app
 # Configure firewall rules
 ufw allow 22	# SSH
 ufw allow 80	# HTTP
+ufw allow 5984  # Couch
 ufw enable
 
 # Setup CouchDB access. Turn off the admin party and enable remote access.
