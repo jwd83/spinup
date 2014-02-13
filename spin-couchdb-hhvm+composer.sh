@@ -31,8 +31,15 @@ ufw allow 22	# SSH
 ufw allow 80	# HTTP
 ufw enable
 
+# Setup CouchDB access. Turn off the admin party and enable remote access.
+cd /etc/couchdb/
+wget https://raw.github.com/jared0x90/spinup/master/config/local.ini
 echo admin=$COUCH_PASS >> /etc/couchdb/local.ini
 
-echo Important file locations
 
+clear
+echo Important file locations...
+echo Couch Config: /etc/couchdb/local.ini
+echo
+echo Passwords...
 echo Couch admin Password: $COUCH_PASS
