@@ -23,8 +23,8 @@ mv composer.phar /usr/local/bin/composer
 # Download HHVM config
 wget https://raw.github.com/jared0x90/spinup/master/config/config.hdf
 
-# Make a place for our app to go per our HHVM config.hdf
-mkdir -p /srv/hhvm/app
+# Make a place for our app to go per our HHVM config.hdf and create the static and images folders
+mkdir -p /srv/hhvm/app/static/images
 
 # Configure firewall rules
 ufw allow 22	# SSH
