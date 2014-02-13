@@ -31,7 +31,8 @@ ufw allow 22	# SSH
 ufw allow 80	# HTTP
 ufw enable
 
-# Create a Couch admin user with a random password
-curl -X PUT $HOST/_config/admins/anna -d '"$COUCH_PASS"'
+echo admin=$COUCH_PASS >> /etc/couchdb/local.ini
 
-echo "Your admin password: $COUCH_PASS"
+echo Important file locations
+
+echo Couch admin Password: $COUCH_PASS
