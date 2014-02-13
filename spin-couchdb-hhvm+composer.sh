@@ -1,6 +1,5 @@
 #!/bin/bash
 # CouchDB + HHVM + Composer
-# Ubuntu 13.10
 
 # Go to root's home folder if we aren't there already
 cd ~
