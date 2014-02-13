@@ -33,26 +33,34 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 # Package Notes
 
-## Gunicorn Worker
+## One Trick Ponies
+
+### Gunicorn Worker
 
 Hookup your WSGI Python Apps and prepare them for webs server of choice. Web
 server not included (unless you count Gunicorn).
 
-## NGINX Web Server
+### NGINX Web Server
 
 Ready to cluster Gunicorn workers? This is still W.I.P. I have a config file
 where I left off included in this repo. See: nginxpy.conf
 
-## MariaDB Galera Cluster
+### MariaDB Galera Cluster
 
 Heavily incomplete. Intended to spin up a MariaDB galera cluster VM.
 
-## CouchDB
+### CouchDB
 
-## CHC: HHVM + CouchDB +  Composer
+Relax.
+
+## Short Stacks
+
+### CHaN: Composer + HHVM and NGINX
+
+### CruNCH: Composer + NGINX + CouchDB + HHVM
 Want the bleeding edge? It doesn't get easier than this. Package Management,
 Facebook's HHVM JiT & one of the simplest NoSQL Databases with point and click
-replication. Currently uses Ubuntu 13.10
+replication.
 
 ### Ports
 * 22: SSH
@@ -69,7 +77,7 @@ replication. Currently uses Ubuntu 13.10
 
 Run these commands as the root user.
 
-## Solo Apps
+## One Trick Ponies
 
 ### Gunicorn Worker
 
@@ -90,8 +98,13 @@ Run these commands as the root user.
 ### CouchDB
 
     bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-couch.sh)
-## Stacks
 
-### CHC: CouchDB + HHVM + Composer
+## Short Stacks
 
-    bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-couchdb-hhvm+composer.sh)
+### CHaN: Composer + HHVM and NGINX
+
+    bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/stack-chan.sh)
+
+### CruNCH: Composer + NGINX + CouchDB + HHVM
+
+    bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/stack-crunch.sh)
