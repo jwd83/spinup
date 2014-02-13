@@ -69,26 +69,29 @@ replication. Currently uses Ubuntu 13.10
 
 Run these commands as the root user.
 
-## Gunicorn Worker
+## Solo Apps
+
+### Gunicorn Worker
 
     bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-gunicorn.sh)
 
-## NGINX Web Server
+### NGINX Web Server
 
     bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-nginx.sh)
 
-## Deluge Thin Client
+### Deluge Thin Client
 
     bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-deluge.sh)
 
-## MariaDB Galera Cluster
+### MariaDB Galera Cluster
 
     bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-galera.sh)
 
-## CouchDB
+### CouchDB
 
     bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-couch.sh)
+## Stacks
 
-## CHC: CouchDB + HHVM + Composer
+### CHC: CouchDB + HHVM + Composer
 
     bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-couchdb-hhvm+composer.sh)
