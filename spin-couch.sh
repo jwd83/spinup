@@ -10,6 +10,7 @@ apt-get install couchdb git ufw -y
 
 # Configure firewall rules
 ufw allow 22    # SSH
+ufw allow 5984
 ufw enable
 
 # Setup CouchDB access. Turn off the admin party and enable remote access.
@@ -26,3 +27,4 @@ echo Couch Config: /etc/couchdb/local.ini
 echo
 echo Passwords...
 echo Couch admin Password: $COUCH_PASS
+echo Couch replication URL: http://admin:$COUCH_PASS@$HOSTNAME:5984/

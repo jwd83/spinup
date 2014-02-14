@@ -35,5 +35,5 @@ useradd -g nginx nginx
 # Restart nginx
 service nginx restart
 
-# updatedb
+# updatedb incase we need to run locate later lets prepare it
 updatedb

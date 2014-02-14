@@ -46,3 +46,4 @@ echo Couch Config: /etc/couchdb/local.ini
 echo
 echo Passwords...
 echo Couch admin Password: $COUCH_PASS
+echo Couch replication URL: http://admin:$COUCH_PASS@$HOSTNAME:5984/
