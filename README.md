@@ -57,6 +57,23 @@ Relax.
 
 ### CHaN: Composer + HHVM and NGINX
 
+#### Benchmarks
+
+On a 512MB Digital Ocean droplet this stack serves up the performance numbers
+below. The static test involves grabbing one of the Twitter Bootstrap 3 CSS
+files from the http://localhost/static/... The dynamic test involves rendering
+a lightly modified Twig template of the Twitter Bootstrap 3 admin panel by the
+Slim PHP microframework.
+
+##### Static
+Requests per second:    4320.25  (373,248,000 a day)
+
+##### Dynamic
+Requests per second:    290.09 (25,056,000 a day)
+
+#### Install
+    bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/stack-chan.sh)
+
 ### CruNCH: Composer + NGINX + CouchDB + HHVM
 Want the bleeding edge? It doesn't get easier than this. Package Management,
 Facebook's HHVM JiT & one of the simplest NoSQL Databases with point and click
@@ -67,11 +84,16 @@ replication.
 * 80: HTTP
 * 5984: CouchDB
 
+### Install
+    bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/stack-crunch.sh)
+
+
 # ToDo
 
-1. Split Python into a Gunicon workers spinup and an NGINX reverse proxy spinup.
-2. Create a MariaDB spinup.
-3. Create a MongoDB spinup.
+1. Reformat the One Trick Ponies to inlcude install instructions in the main notes.
+2. Split Python into a Gunicon workers spinup and an NGINX reverse proxy spinup.
+3. Create a MariaDB spinup.
+4. Create a MongoDB spinup.
 
 # Instructions
 
@@ -103,8 +125,8 @@ Run these commands as the root user.
 
 ### CHaN: Composer + HHVM and NGINX
 
-    bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/stack-chan.sh)
+
 
 ### CruNCH: Composer + NGINX + CouchDB + HHVM
 
-    bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/stack-crunch.sh)
+
