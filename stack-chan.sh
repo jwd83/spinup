@@ -1,14 +1,15 @@
 #!/bin/bash
+# CHaN stack spinup
+# Composer + HHVM + NGINX
 
+# Go to root's home folder if we aren't there already
 cd ~
-
-wget https://raw.github.com/jared0x90/spinup/master/config/stack-chan-nginx.conf
 
 # Add Facebook's HHVM to our sources
 wget -O - http://dl.hhvm.com/conf/hhvm.gpg.key | sudo apt-key add -
 echo deb http://dl.hhvm.com/ubuntu saucy main | sudo tee /etc/apt/sources.list.d/hhvm.list
 
-# Update the VM and install HHVM, NGINX, git, PHP5 CLI (for Composer), Composer itself & UFW
+# Update the VM and install HHVM, NGINX, git, PHP5 CLI w/ JSON, Composer & UFW
 apt-get update -y && apt-get upgrade -y
 apt-get install php5-cli php5-json hhvm-fastcgi git ufw nginx -y
 curl -sS https://getcomposer.org/installer | php
@@ -25,7 +26,7 @@ mkdir -p /srv/hhvm/app/static/images
 # Setup NGINX configuration
 cd /etc/nginx
 mv nginx.conf nginx.conf.bak
-wget https://raw2.github.com/jared0x90/spinup/master/config/stack-chan-nginx.conf
+wget https://raw.github.com/jared0x90/spinup/master/config/stack-crunch-chan-nginx.conf
 mv stack-chan-nginx.conf nginx.conf
 
 # Create nginx.nginx
