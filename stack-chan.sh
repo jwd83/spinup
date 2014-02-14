@@ -21,3 +21,9 @@ ufw enable
 
 # Make a place for our app to go per our HHVM config.hdf and create the static and images folders
 mkdir -p /srv/hhvm/app/static/images
+
+# Setup NGINX configuration
+cd /etc/nginx
+mv nginx.conf nginx.conf.bak
+wget https://raw2.github.com/jared0x90/spinup/master/config/stack-chan-nginx.conf
+mv stack-chan-nginx.conf nginx.conf
