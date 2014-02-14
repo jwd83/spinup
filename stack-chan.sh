@@ -27,3 +27,13 @@ cd /etc/nginx
 mv nginx.conf nginx.conf.bak
 wget https://raw2.github.com/jared0x90/spinup/master/config/stack-chan-nginx.conf
 mv stack-chan-nginx.conf nginx.conf
+
+# Create nginx.nginx
+groupadd nginx
+useradd -g nginx nginx
+
+# Restart nginx
+service nginx restart
+
+# updatedb
+updatedb
