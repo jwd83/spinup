@@ -79,12 +79,12 @@ Want the bleeding edge? It doesn't get easier than this. Package Management,
 Facebook's HHVM JiT & one of the simplest NoSQL Databases with point and click
 replication.
 
-### Ports
+#### Ports
 * 22: SSH
 * 80: HTTP
 * 5984: CouchDB
 
-### Install
+#### Install
     bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/stack-crunch.sh)
 
 
@@ -120,13 +120,3 @@ Run these commands as the root user.
 ### CouchDB
 
     bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-couch.sh)
-
-## Short Stacks
-
-### CHaN: Composer + HHVM and NGINX
-
-
-
-### CruNCH: Composer + NGINX + CouchDB + HHVM
-
-
