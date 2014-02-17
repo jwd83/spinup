@@ -13,7 +13,7 @@ ufw allow 22
 #
 # Please note that you have to update your firewall configuration to
 # allow connections to the following ports: 11211, 11210, 11209, 4369,
-# 8091, 8092 and from 21100 to 21299.
+# 8091, 8092, 18091, 18092, 11214, 11215 and from 21100 to 21299.
 
 ufw allow 11211
 ufw allow 11210
@@ -21,7 +21,12 @@ ufw allow 11209
 ufw allow 4369
 ufw allow 8091
 ufw allow 8092
+ufw allow 18091
+ufw allow 18092
+ufw allow 11214
+ufw allow 11215
 ufw allow proto tcp to any port 21100:21299
+
 
 echo "Turning on firewall"
 ufw enable
