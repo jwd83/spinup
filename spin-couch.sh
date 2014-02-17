@@ -11,11 +11,11 @@ apt-get install couchdb git ufw -y
 # Configure firewall rules
 ufw allow 22    # SSH
 ufw allow 5984
-ufw --force  enable
+ufw --force enable
 
 # Setup CouchDB access. Turn off the admin party and enable remote access.
 cd /etc/couchdb/
-rm local.ini
+mv local.ini local.ini.bak
 wget https://raw.github.com/jared0x90/spinup/master/config/local.ini
 echo admin=$COUCH_PASS >> /etc/couchdb/local.ini
 chown couchdb.couchdb local.ini
