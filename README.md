@@ -40,7 +40,7 @@ Relax.
 
     bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-couch.sh)
 
-### Couchbase    
+### Couchbase CE 2.2
 
     bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-couchbase.sh)
 
