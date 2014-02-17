@@ -29,7 +29,7 @@ ufw allow proto tcp to any port 21100:21299
 
 
 echo "Turning on firewall"
-ufw enable
+ufw --force  enable
 
 echo "Installing Couchbase EE 2.5.0 x64"
 wget http://packages.couchbase.com/releases/2.5.0/couchbase-server-enterprise_2.5.0_x86_64.deb
