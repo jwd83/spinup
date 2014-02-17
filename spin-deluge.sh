@@ -22,7 +22,7 @@ apt-get install -y apache2-utils
 ufw allow 22
 ufw allow 80
 ufw allow 58846
-ufw enable
+ufw --force  enable
 
 # -------------------------------------
 # Deluge Create Config & Credentials
