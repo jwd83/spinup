@@ -40,9 +40,13 @@ Relax.
 
     bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-couch.sh)
 
-### Couchbase CE 2.2
+### Couchbase CE 2.2 x64
 
     bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-couchbase-ce-2.2.sh)
+
+### Couchbase EE 2.5 x64
+
+    bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-couchbase-ee-2.5.sh)
 
 ### MariaDB Galera Cluster
 
