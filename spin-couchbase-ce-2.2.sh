@@ -24,7 +24,7 @@ ufw allow 8092
 ufw allow proto tcp to any port 21100:21299
 
 echo "Turning on firewall"
-ufw enable
+ufw --force  enable
 
 echo "Installing Couchbase CE 2.2 x64"
 wget http://packages.couchbase.com/releases/2.2.0/couchbase-server-community_2.2.0_x86_64.deb
