@@ -35,23 +35,39 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ## One Trick Ponies
 
+### CouchDB
+Relax.
+
+    bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-couch.sh)
+
+### Couchbase    
+
+    bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-couchbase.sh)
+
+### MariaDB Galera Cluster
+
+Heavily incomplete. Intended to spin up a MariaDB galera cluster VM.
+
+
+    bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-galera.sh)
+
 ### Gunicorn Worker
 
 Hookup your WSGI Python Apps and prepare them for webs server of choice. Web
 server not included (unless you count Gunicorn).
+
+    bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-gunicorn.sh)
 
 ### NGINX Web Server
 
 Ready to cluster Gunicorn workers? This is still W.I.P. I have a config file
 where I left off included in this repo. See: nginxpy.conf
 
-### MariaDB Galera Cluster
+    bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-nginx.sh)
 
-Heavily incomplete. Intended to spin up a MariaDB galera cluster VM.
+### Deluge Thin Client
 
-### CouchDB
-
-Relax.
+    bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-deluge.sh)
 
 ## Short Stacks
 
@@ -72,6 +88,7 @@ Requests per second:    4320.25  (373,248,000 a day)
 Requests per second:    290.09 (25,056,000 a day)
 
 #### Install
+
     bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/stack-chan.sh)
 
 ### CruNCH: Composer + NGINX + CouchDB + HHVM
@@ -85,8 +102,8 @@ replication.
 * 5984: CouchDB
 
 #### Install
-    bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/stack-crunch.sh)
 
+    bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/stack-crunch.sh)
 
 # ToDo
 
@@ -94,29 +111,3 @@ replication.
 2. Split Python into a Gunicon workers spinup and an NGINX reverse proxy spinup.
 3. Create a MariaDB spinup.
 4. Create a MongoDB spinup.
-
-# Instructions
-
-Run these commands as the root user.
-
-## One Trick Ponies
-
-### Gunicorn Worker
-
-    bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-gunicorn.sh)
-
-### NGINX Web Server
-
-    bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-nginx.sh)
-
-### Deluge Thin Client
-
-    bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-deluge.sh)
-
-### MariaDB Galera Cluster
-
-    bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-galera.sh)
-
-### CouchDB
-
-    bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-couch.sh)
