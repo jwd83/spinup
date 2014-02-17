@@ -22,7 +22,7 @@ mv composer.phar /usr/local/bin/composer
 ufw allow 22    # SSH
 ufw allow 80    # HTTP
 ufw allow 5984  # Couch
-ufw enable
+ufw --force  enable
 
 # Make a place for our app to go per our HHVM config.hdf and create the static and images folders
 mkdir -p /srv/hhvm/app/static/images
