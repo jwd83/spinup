@@ -21,7 +21,7 @@ apt-get install -y vim
 # Setup firewall rules
 ufw allow 22
 ufw allow 8000
-ufw enable
+ufw --force  enable
 
 # Get distribute, pip & virtualenv running
 curl -O http://python-distribute.org/distribute_setup.py
