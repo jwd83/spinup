@@ -42,7 +42,7 @@ Relax.
 
 ### Couchbase CE 2.2
 
-    bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-couchbase.sh)
+    bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-couchbase-ce-2.2.sh)
 
 ### MariaDB Galera Cluster
 
