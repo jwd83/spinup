@@ -11,7 +11,7 @@ apt-get install couchdb git ufw -y
 # Configure firewall rules
 ufw allow 22    # SSH
 ufw allow 5984
-ufw enable
+ufw --force  enable
 
 # Setup CouchDB access. Turn off the admin party and enable remote access.
 cd /etc/couchdb/
