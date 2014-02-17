@@ -38,3 +38,6 @@ service nginx restart
 
 # updatedb incase we need to run locate later lets prepare it
 updatedb
+
+# Setup HHVM-fastcgi to run at boot
+update-rc.d hhvm-fastcgi defaults

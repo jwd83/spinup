@@ -40,6 +40,12 @@ useradd -g nginx nginx
 # Restart nginx
 service nginx restart
 
+# Setup HHVM-fastcgi to run at boot
+update-rc.d hhvm-fastcgi defaults
+
+# updatedb incase we need to run locate later lets prepare it
+updatedb
+
 # Setup CouchDB access. Turn off the admin party and enable remote access.
 cd /etc/couchdb/
 mv local.ini local.ini.bak
@@ -61,6 +67,3 @@ echo Passwords...
 echo
 echo Couch admin Password: $COUCH_PASS
 echo Couch replication URL: http://admin:$COUCH_PASS@$HOSTNAME:5984/
-
-# updatedb incase we need to run locate later lets prepare it
-updatedb
