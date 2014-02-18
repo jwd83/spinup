@@ -95,7 +95,7 @@ Requests per second:    290.09 (25,056,000 a day)
 
     bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/stack-chan.sh)
 
-### CruNCH: Composer + NGINX + CouchDB + HHVM
+### CrUNCH: Composer + NGINX + CouchDB + HHVM on Ubuntu
 Want the bleeding edge? It doesn't get easier than this. Composer's package
 management, Facebook's HHVM JiT & CouchDB - one of the easiest NoSQL Databases
 to use with point and click replication sitting behind NGINX the powerhouse.

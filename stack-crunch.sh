@@ -1,6 +1,6 @@
 #!/bin/bash
-# CruNCH stack spinup
-# Composer + NGINX + CouchDB + HHVM
+# CrUNCH stack spinup
+# Composer + NGINX + CouchDB + HHVM on Ubuntu
 
 # Generate a random admin password for CouchDB
 COUCH_PASS=$(cat /dev/urandom | tr -dc 'a-z0-9' | fold -w 24 | head -n 1)
@@ -68,5 +68,11 @@ echo HHVM App: /srv/hhvm/app/index.php
 echo
 echo Passwords...
 echo
-echo Couch admin Password: $COUCH_PASS
-echo Couch replication URL: http://admin:$COUCH_PASS@$HOSTNAME:5984/
+echo CouchDB Admin Password: $COUCH_PASS
+echo
+echo CouchDB Base Replication URL:
+echo http://admin:$COUCH_PASS@$HOSTNAME:5984/
+echo
+echo CouchDB Futon Utility:
+echo http://admin:$COUCH_PASS@$HOSTNAME:5984/_utils/
+echo
