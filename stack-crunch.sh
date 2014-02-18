@@ -32,6 +32,9 @@ cd /etc/nginx
 mv nginx.conf nginx.conf.bak
 wget https://raw.github.com/jared0x90/spinup/master/config/stack-crunch-chan-nginx.conf
 mv stack-crunch-chan-nginx.conf nginx.conf
+SEDFIND="#DbPasswordHereForCruNCH"
+SEDREPLACE="fastcgi_param  COUCH_PASS \"$COUCH_PASS\";"
+sed -i "s/$SEDFIND/$SEDREPLACE/g" nginx.conf
 
 # Create nginx.nginx
 groupadd nginx
