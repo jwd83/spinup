@@ -7,7 +7,7 @@ sh -c "echo deb http://get.docker.io/ubuntu docker main > /etc/apt/sources.list.
 
 # Update system and install docker & screen
 apt-get update -y && apt-get upgrade -y
-apt-get install lxc-docker screen -y 
+apt-get install lxc-docker screen git -y 
 
 # Update UFW settings for docker
 cp /etc/default/ufw /etc/default/ufw.bak
@@ -17,4 +17,4 @@ sed -i "s/$SEDFIND/$SEDREPLACE/g" /etc/default/ufw
 ufw reload
 ufw allow 4243/tcp
 ufw allow 22
-ufw -- force enable
+ufw --force enable
