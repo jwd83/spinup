@@ -21,3 +21,6 @@ ufw --force enable
 
 # Get a good base image to work from
 docker pull phusion/baseimage
+
+# Start GNU Screen
+screen
