@@ -35,6 +35,10 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ## One Trick Ponies
 
+### Docker
+
+    bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-docker.sh)
+
 ### CouchDB
 Relax.
 
