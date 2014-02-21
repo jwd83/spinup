@@ -18,3 +18,6 @@ ufw reload
 ufw allow 4243/tcp
 ufw allow 22
 ufw --force enable
+
+# Get a good base image to work from
+docker pull phusion/baseimage
