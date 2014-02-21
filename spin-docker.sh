@@ -7,7 +7,7 @@ sh -c "echo deb http://get.docker.io/ubuntu docker main > /etc/apt/sources.list.
 
 # Update system and install docker & screen
 apt-get update -y && apt-get upgrade -y
-apt-get install lxc-docker screen git -y 
+apt-get install lxc-docker screen git htop iftop -y 
 
 # Update UFW settings for docker
 cp /etc/default/ufw /etc/default/ufw.bak
