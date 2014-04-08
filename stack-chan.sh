@@ -27,7 +27,7 @@ mkdir -p /srv/hhvm/app/static/images
 cd /etc/nginx
 mv nginx.conf nginx.conf.bak
 wget https://raw.github.com/jared0x90/spinup/master/config/stack-crunch-chan-nginx.conf
-mv stack-chan-nginx.conf nginx.conf
+mv stack-crunch-chan-nginx.conf nginx.conf
 
 # Create nginx.nginx
 groupadd nginx
