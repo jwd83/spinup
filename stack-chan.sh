@@ -1,4 +1,7 @@
 #!/bin/bash
+# stack-chan.sh
+# View the complete collection at: https://github.com/jared0x90/spinup
+#
 # CHaN stack spinup
 # Composer + HHVM + NGINX
 
