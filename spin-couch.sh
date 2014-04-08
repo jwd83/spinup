@@ -1,6 +1,8 @@
 #!/bin/bash
-# CouchDB
+# spin-couch.sh
+# View the complete collection at: https://github.com/jared0x90/spinup
 
+# CouchDB
 # Generate a random admin password for CouchDB
 COUCH_PASS=$(cat /dev/urandom | tr -dc 'a-z0-9' | fold -w 24 | head -n 1)
 
