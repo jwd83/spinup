@@ -1,6 +1,6 @@
 #!/bin/bash
 # spin-couch.sh
-# View the complete collection at: https://github.com/jared0x90/spinup
+# View the complete collection at: https://github.com/jwd83/spinup
 
 # CouchDB
 # Generate a random admin password for CouchDB
@@ -18,7 +18,7 @@ ufw --force enable
 # Setup CouchDB access. Turn off the admin party and enable remote access.
 cd /etc/couchdb/
 mv local.ini local.ini.bak
-wget https://raw.github.com/jared0x90/spinup/master/config/spin-couch-local.ini
+wget https://raw.github.com/jwd83/spinup/master/config/spin-couch-local.ini
 mv spin-couch-local.ini local.ini
 echo admin=$COUCH_PASS >> /etc/couchdb/local.ini
 chown couchdb.couchdb local.ini
