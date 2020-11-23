@@ -37,45 +37,45 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ### Docker
 
-    bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-docker.sh)
+    bash <(wget -qO- https://raw.github.com/jwd83/spinup/master/spin-docker.sh)
 
 ### CouchDB
 Relax.
 
-    bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-couch.sh)
+    bash <(wget -qO- https://raw.github.com/jwd83/spinup/master/spin-couch.sh)
 
 ### Couchbase CE 2.2 x64
 
-    bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-couchbase-ce-2.2.sh)
+    bash <(wget -qO- https://raw.github.com/jwd83/spinup/master/spin-couchbase-ce-2.2.sh)
 
 ### Couchbase EE 2.5 x64
 
-    bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-couchbase-ee-2.5.sh)
+    bash <(wget -qO- https://raw.github.com/jwd83/spinup/master/spin-couchbase-ee-2.5.sh)
 
 ### MariaDB Galera Cluster
 
 Heavily incomplete. Intended to spin up a MariaDB galera cluster VM.
 
 
-    bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-galera.sh)
+    bash <(wget -qO- https://raw.github.com/jwd83/spinup/master/spin-galera.sh)
 
 ### Gunicorn Worker
 
 Hookup your WSGI Python Apps and prepare them for webs server of choice. Web
 server not included (unless you count Gunicorn).
 
-    bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-gunicorn.sh)
+    bash <(wget -qO- https://raw.github.com/jwd83/spinup/master/spin-gunicorn.sh)
 
 ### NGINX Web Server
 
 Ready to cluster Gunicorn workers? This is still W.I.P. I have a config file
 where I left off included in this repo. See: nginxpy.conf
 
-    bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-nginx.sh)
+    bash <(wget -qO- https://raw.github.com/jwd83/spinup/master/spin-nginx.sh)
 
 ### Deluge Thin Client
 
-    bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/spin-deluge.sh)
+    bash <(wget -qO- https://raw.github.com/jwd83/spinup/master/spin-deluge.sh)
 
 ## Short Stacks
 
@@ -97,7 +97,7 @@ Requests per second:    290.09 (25,056,000 a day)
 
 #### Install
 
-    bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/stack-chan.sh)
+    bash <(wget -qO- https://raw.github.com/jwd83/spinup/master/stack-chan.sh)
 
 ### CrUNCH: Composer + NGINX + CouchDB + HHVM on Ubuntu
 Want the bleeding edge? It doesn't get easier than this. Composer's package
@@ -121,7 +121,7 @@ Your local CouchDB password is accessible in PHP (HHVM) using...
 
 #### Install
 
-    bash <(wget -qO- https://raw.github.com/jared0x90/spinup/master/stack-crunch.sh)
+    bash <(wget -qO- https://raw.github.com/jwd83/spinup/master/stack-crunch.sh)
 
 # ToDo
 
