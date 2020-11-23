@@ -1,6 +1,6 @@
 #!/bin/bash
 # stack-chan.sh
-# View the complete collection at: https://github.com/jared0x90/spinup
+# View the complete collection at: https://github.com/jwd83/spinup
 #
 # CHaN stack spinup
 # Composer + HHVM + NGINX
@@ -29,7 +29,7 @@ mkdir -p /srv/hhvm/app/static/images
 # Setup NGINX configuration
 cd /etc/nginx
 mv nginx.conf nginx.conf.bak
-wget https://raw.github.com/jared0x90/spinup/master/config/stack-crunch-chan-nginx.conf
+wget https://raw.github.com/jwd83/spinup/master/config/stack-crunch-chan-nginx.conf
 mv stack-crunch-chan-nginx.conf nginx.conf
 
 # Create nginx.nginx
