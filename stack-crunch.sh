@@ -30,7 +30,7 @@ mkdir -p /srv/hhvm/app/static/images
 # Setup NGINX configuration
 cd /etc/nginx
 mv nginx.conf nginx.conf.bak
-wget https://raw.github.com/jared0x90/spinup/master/config/stack-crunch-chan-nginx.conf
+wget https://raw.github.com/jwd83/spinup/master/config/stack-crunch-chan-nginx.conf
 mv stack-crunch-chan-nginx.conf nginx.conf
 SEDFIND="#DbPasswordHereForCruNCH"
 SEDREPLACE="fastcgi_param  COUCH_PASS \"$COUCH_PASS\";"
@@ -52,7 +52,7 @@ updatedb
 # Setup CouchDB access. Turn off the admin party and enable remote access.
 cd /etc/couchdb/
 mv local.ini local.ini.bak
-wget https://raw.github.com/jared0x90/spinup/master/config/spin-couch-local.ini
+wget https://raw.github.com/jwd83/spinup/master/config/spin-couch-local.ini
 mv spin-couch-local.ini local.ini
 echo admin=$COUCH_PASS >> /etc/couchdb/local.ini
 chown couchdb.couchdb local.ini
